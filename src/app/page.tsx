@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import About from "./components/About";
 import ContactForm from "./components/ContactUs";
 import Footer from "./components/Footer";

@@ -1,6 +1,6 @@
-interface IAboutProps {}
+/* eslint-disable react/no-unescaped-entities */
 
-export default function About(_props: IAboutProps) {
+export default function About() {
   return (
     <div
       style={{
