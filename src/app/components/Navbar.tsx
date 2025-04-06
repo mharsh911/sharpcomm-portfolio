@@ -9,7 +9,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 bg-transparent bg-opacity-80 p-13 text-white z-999">
+    <nav className="w-full fixed top-0 left-0 bg-transparent bg-opacity-80 p-10 text-white z-999">
       <div className="mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">

@@ -2,22 +2,11 @@
 
 export default function About() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        columnGap: 4,
-        width: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "170px",
-      }}
-      className="p-10 bg-black text-white"
-    >
-      <div style={{ width: "50%", fontSize: "24px" }}>
+    <div className="p-10 bg-black text-white w-full flex flex-col md:flex-row md:items-center md:justify-center gap-4 min-h-[170px]">
+      <div className="w-full md:w-[20%] text-[24px] md:text-left text-center leading-tight">
         ABOUT <span style={{ color: "#49C4DB" }}>US</span>
       </div>
-      <div style={{ fontSize: "14px" }}>
+      <div className="w-full md:w-[70%] text-[14px] md:text-left text-center leading-tight">
         Sharpcom Media is a film production and advertising agency with a pan
         India network. We tell stories that resonate. Specializing in prime
         visual content, we at Sharpcom are a young and passionate team exploring

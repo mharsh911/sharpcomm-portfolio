@@ -39,7 +39,7 @@ const video: IVideoDescription = {
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen bg-black text-white">
+    <main className="w-full min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
       <VideoThumbnail video={video} />
       <About />

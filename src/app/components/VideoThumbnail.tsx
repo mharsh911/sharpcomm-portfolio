@@ -28,7 +28,7 @@ export default function VideoThumbnail(props: IVideoThumbnailProps) {
   // };
 
   return (
-    <section className="relative w-full h-[100vh] md:h-screen flex items-center justify-start p-4 md:p-8">
+    <section className="relative w-full h-[100vh] md:h-screen flex items-center justify-start p-4 md:p-8 overflow-x-hidden">
       <Image
         src={src}
         alt="Hero Image"
