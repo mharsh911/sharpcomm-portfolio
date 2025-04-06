@@ -19,22 +19,23 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("Message Sent!");
-    setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
     <div
-      className="flex flex-row justify-center items-center px-4 py-6"
+      className="flex flex-col md:flex-row justify-center items-center px-4 py-6"
       style={{ backgroundColor: "#49C4DB" }}
     >
-      <div className="w-[30%] flex justify-center items-center">
-        <div className="text-5xl uppercase font-bold text-black">
+      {/* Left Section */}
+      <div className="w-full md:w-[30%] flex justify-center items-center mb-6 md:mb-0">
+        <div className="text-5xl uppercase font-bold text-black text-center md:text-left">
           Connect with Us
         </div>
       </div>
-      <div className="w-full max-w-3xl p-8">
-        {/* Contact Us Heading */}
 
+      {/* Right Section (Form) */}
+      <div className="w-full max-w-3xl p-8">
         <form onSubmit={handleSubmit}>
           {/* Name Field */}
           <input
@@ -48,14 +49,14 @@ const ContactForm: React.FC = () => {
           />
 
           {/* Email & Phone Fields in a Row */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Your E-Mail"
-              className="w-2/3 p-3 bg-white text-black placeholder-gray-600 text-lg focus:outline-none focus:ring-0"
+              className="w-full sm:w-2/3 p-3 bg-white text-black placeholder-gray-600 text-lg focus:outline-none focus:ring-0"
               required
             />
             <input
@@ -64,7 +65,7 @@ const ContactForm: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Your Phone"
-              className="w-1/3 p-3 bg-white text-black placeholder-gray-600 text-lg focus:outline-none focus:ring-0"
+              className="w-full sm:w-1/3 p-3 bg-white text-black placeholder-gray-600 text-lg focus:outline-none focus:ring-0"
             />
           </div>
 
@@ -81,7 +82,7 @@ const ContactForm: React.FC = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="mt-6 block  px-8 py-3 text-white text-lg border border-white rounded-md hover:bg-white hover:text-black transition"
+            className="mt-6 block px-8 py-3 text-white text-lg border border-white rounded-md hover:bg-white hover:text-black transition"
           >
             Send Message
           </button>

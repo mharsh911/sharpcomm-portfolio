@@ -28,35 +28,33 @@ export default function VideoThumbnail(props: IVideoThumbnailProps) {
   // };
 
   return (
-    <section className="relative w-full h-screen p-8 flex items-center justify-start">
+    <section className="relative w-full h-[100vh] md:h-screen flex items-center justify-start p-4 md:p-8">
       <Image
         src={src}
         alt="Hero Image"
         layout="fill"
         objectFit="cover"
         className="z-0"
+        priority
       />
-      <div className="absolute z-10 text-start p-5" style={{ width: "45%" }}>
-        <div className="mt-1" style={{ fontSize: "20px" }}>
+      <div className="absolute z-10 text-white w-full md:w-1/2 p-4 md:p-8 bg-opacity-40 rounded-lg md:rounded-none">
+        <div className="text-sm md:text-base mb-1">
           PRODUCTION HOUSE: {productionHouse.toUpperCase()}
         </div>
-        <div
-          className="font-bold"
-          style={{ fontSize: "60px", lineHeight: "1.1" }}
-        >
+        <div className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[1.1] mb-2">
           {title.toUpperCase()}
         </div>
-        <div className="mt-1" style={{ fontSize: "18px" }}>
+        <div className="text-sm md:text-base mb-1">
           CLIENT: {client.toUpperCase()}
         </div>
-        <div style={{ fontSize: "18px" }}>
+        <div className="text-sm md:text-base mb-2">
           DIRECTED BY: {director.toUpperCase()}
         </div>
-        <button className="flex items-center space-x-2 text-white py-4">
+        <button className="flex items-center space-x-3 text-white py-2 rounded-lg bg-opacity-70 hover:bg-opacity-90 transition ">
           <div className="w-10 h-10 flex items-center justify-center bg-[#49C4DB] rounded-full">
             <FaPlay className="text-black" />
           </div>
-          <span className="text-lg font-medium">Play</span>
+          <span className="text-sm md:text-base font-semibold">Play</span>
         </button>
       </div>
 
